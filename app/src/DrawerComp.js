@@ -1,29 +1,45 @@
 import React, { useState } from "react";
-import { Box, Drawer, IconButton, List, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import { Box, Drawer, Button, IconButton, List, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import AppsIcon from '@mui/icons-material/Apps';
 import MenuIcon from '@mui/icons-material/Menu';
+import { CustomizedTypogrgaphy } from './styles/styles';
+import {Link} from "react-router-dom";
 
 const DrawerComp = () => {
     const [openDrawer, setOpenDrawer] = useState(false)
-    const PAGES = ["Portfolio","Case Studies","Skillset","Contact Me","Login"];
     return(
         <React.Fragment>
             <Drawer open={openDrawer} onClose={()=>setOpenDrawer(false)}>
                 <Box display={"flex"} padding={2}>
-                    <AppsIcon sx={{marginRight:'10px'}}/><Typography>LHeathMc</Typography>
+                    <AppsIcon sx={{marginRight:'10px'}}/><CustomizedTypogrgaphy sx={{textColor:'inherit'}}><Link onClick={()=> setOpenDrawer(false)} LinkComponent={Link} to="Home">LHeathMc</Link></CustomizedTypogrgaphy>
                 </Box>
                 
                 <List sx={{minWidth:'300px'}}>
-                    {
-                        PAGES.map((page,index)=>(
-                            <ListItemButton onClick={()=> setOpenDrawer(false)} key={index}>
-                                <ListItemIcon>
-                                    <ListItemText>{page}</ListItemText>
-                                </ListItemIcon>
-                            </ListItemButton>
-                        ))
-                    }
+                    <ListItemButton onClick={()=> setOpenDrawer(false)}>
+                        <ListItemIcon>
+                            <ListItemText><Link to="Portfolio">Portfolio</Link></ListItemText>
+                        </ListItemIcon>
+                    </ListItemButton>
+
+                    <ListItemButton onClick={()=> setOpenDrawer(false)}>
+                        <ListItemIcon>
+                            <ListItemText><Link to="CaseStudies">Case Studies</Link></ListItemText>
+                        </ListItemIcon>
+                    </ListItemButton>
+
+                    <ListItemButton onClick={()=> setOpenDrawer(false)}>
+                        <ListItemIcon>
+                            <ListItemText><Link to="Skillset">Skillset</Link></ListItemText>
+                        </ListItemIcon>
+                    </ListItemButton>
+
+                    <ListItemButton onClick={()=> setOpenDrawer(false)}>
+                        <ListItemIcon>
+                            <ListItemText><Link to="ContactMe">Contact Me</Link></ListItemText>
+                        </ListItemIcon>
+                    </ListItemButton>
                 </List>
+                <Button sx={{margin:'auto'}} variant='contained'>Login</Button>
             </Drawer>
             <IconButton sx={{color: 'white',marginLeft:'auto'}} onClick={()=> setOpenDrawer(!openDrawer)}>
                 <MenuIcon/>
