@@ -11,10 +11,17 @@ const DrawerComp = () => {
         <React.Fragment>
             <Drawer open={openDrawer} onClose={()=>setOpenDrawer(false)}>
                 <Box display={"flex"} padding={2}>
-                    <AppsIcon sx={{marginRight:'10px'}}/><CustomizedTypogrgaphy sx={{textColor:'inherit'}}><Link onClick={()=> setOpenDrawer(false)} LinkComponent={Link} to="Home">LHeathMc</Link></CustomizedTypogrgaphy>
+                    <AppsIcon sx={{marginRight:'10px'}}/><CustomizedTypogrgaphy sx={{textColor:'inherit'}}>LHeathMc</CustomizedTypogrgaphy>
                 </Box>
                 
                 <List sx={{minWidth:'300px'}}>
+
+                <ListItemButton onClick={()=> setOpenDrawer(false)}>
+                    <ListItemIcon>
+                        <ListItemText><Link to="Home">Home</Link></ListItemText>
+                    </ListItemIcon>
+                </ListItemButton>
+
                     <ListItemButton onClick={()=> setOpenDrawer(false)}>
                         <ListItemIcon>
                             <ListItemText><Link to="Portfolio">Portfolio</Link></ListItemText>

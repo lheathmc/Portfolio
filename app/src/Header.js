@@ -15,7 +15,7 @@ const Header = () => {
             <React.Fragment>
                 <AppBar sx={{background:"#2A7E83", boxShadow: "0", position:"fixed", top: 0}}>
                     <Toolbar>
-                        <AppsIcon sx={{marginRight:'10px'}}/><CustomizedTypogrgaphy sx={{textColor:'inherit'}}><Link LinkComponent={Link} to="Home" className='logo'>LHeathMc</Link></CustomizedTypogrgaphy>
+                        <AppsIcon sx={{marginRight:'10px'}}/><CustomizedTypogrgaphy sx={{textColor:'inherit'}}>LHeathMc</CustomizedTypogrgaphy>
                         {isMatch ? (
                             <>
                                 <DrawerComp></DrawerComp>
@@ -23,6 +23,7 @@ const Header = () => {
                             ) : (
                                 <>
                                     <Tabs value={value} onChange={(e, value)=> setValue(value)} LinkComponent={Link} role="navigation" className='site-navigation'>
+                                        <Tab value="Home" key="1" label="Home" LinkComponent={Link} to="Home"/>
                                         <Tab value="Portfolio" key="1" label="Portfolio" LinkComponent={Link} to="Portfolio"/>
                                         <Tab value="Case Studies" key="2" label="Case Studies" LinkComponent={Link} to="CaseStudies"/>
                                         <Tab value="Skillset" key="3" label="Skillset" LinkComponent={Link} to="Skillset"/>
