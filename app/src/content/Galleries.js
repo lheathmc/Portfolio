@@ -7,7 +7,7 @@ const Portfolio = () => {
     return (
         <Box display={'flex'} flexDirection={isMatch?"column":"row"} padding={3} bgcolor="#efefef">
             <Typography variant='h1'>
-              Portfolio
+              Galleries
             </Typography>
         </Box>
     )

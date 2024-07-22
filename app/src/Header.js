@@ -24,7 +24,7 @@ const Header = () => {
                                 <>
                                     <Tabs value={value} onChange={(e, value)=> setValue(value)} LinkComponent={Link} role="navigation" className='site-navigation'>
                                         <Tab value="Home" key="1" label="Home" LinkComponent={Link} to="Home"/>
-                                        <Tab value="Portfolio" key="1" label="Portfolio" LinkComponent={Link} to="Portfolio"/>
+                                        <Tab value="Galleries" key="1" label="Galleries" LinkComponent={Link} to="Galleries"/>
                                         <Tab value="Case Studies" key="2" label="Case Studies" LinkComponent={Link} to="CaseStudies"/>
                                         <Tab value="Skillset" key="3" label="Skillset" LinkComponent={Link} to="Skillset"/>
                                         <Tab value="Contact Me" key="4" label="Contact Me" LinkComponent={Link} to="ContactMe"/>
