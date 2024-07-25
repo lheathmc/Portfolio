@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.5e518fc8.css",
-    "main.js": "/Portfolio/static/js/main.fffad617.js",
+    "main.css": "/Portfolio/static/css/main.fd61d53e.css",
+    "main.js": "/Portfolio/static/js/main.b8a2e4a3.js",
+    "static/media/Nature.jpg": "/Portfolio/static/media/Nature.ef4b651371886c59cb73.jpg",
+    "static/media/OurMcDonaldFamilyTree2.jpg": "/Portfolio/static/media/OurMcDonaldFamilyTree2.268b63eea9b6d75a0842.jpg",
+    "static/media/BotSwing2-Painting.jpg": "/Portfolio/static/media/BotSwing2-Painting.b1f886e5057ea4470727.jpg",
+    "static/media/Aeonik-Bold.woff2": "/Portfolio/static/media/Aeonik-Bold.4b5c5bec6248f51c46f2.woff2",
+    "static/media/Aeonik-Regular.woff2": "/Portfolio/static/media/Aeonik-Regular.c672e6fbaa411f5719f3.woff2",
     "index.html": "/Portfolio/index.html",
-    "main.5e518fc8.css.map": "/Portfolio/static/css/main.5e518fc8.css.map",
-    "main.fffad617.js.map": "/Portfolio/static/js/main.fffad617.js.map"
+    "main.fd61d53e.css.map": "/Portfolio/static/css/main.fd61d53e.css.map",
+    "main.b8a2e4a3.js.map": "/Portfolio/static/js/main.b8a2e4a3.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e518fc8.css",
-    "static/js/main.fffad617.js"
+    "static/css/main.fd61d53e.css",
+    "static/js/main.b8a2e4a3.js"
   ]
 }
