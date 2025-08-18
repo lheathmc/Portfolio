@@ -15,9 +15,6 @@ export default function Footer() {
             <Link href="/skills" className="text-muted-foreground hover:text-foreground transition-colors">
               Skills
             </Link>
-            <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
-              Blog
-            </Link>
             <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
               Contact
             </Link>

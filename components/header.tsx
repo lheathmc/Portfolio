@@ -31,9 +31,6 @@ export default function Header() {
           <Link href="/skills" className="text-muted-foreground hover:text-foreground transition-colors">
             Skills
           </Link>
-          <Link href="/blog" className="text-muted-foreground hover:text-foreground transition-colors">
-            Blog
-          </Link>
           <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
             Contact
           </Link>
@@ -65,13 +62,6 @@ export default function Header() {
               onClick={() => setIsMenuOpen(false)}
             >
               Skills
-            </Link>
-            <Link
-              href="/blog"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Blog
             </Link>
             <Link
               href="/contact"

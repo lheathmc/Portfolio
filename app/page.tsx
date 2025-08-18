@@ -1,12 +1,10 @@
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight } from "lucide-react"
-import { blogPosts } from "@/lib/blog-data"
 import { Badge } from "@/components/ui/badge"
 
 export default function Home() {
-  // Get the 3 most recent blog posts
-  const recentPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3)
+
 
   return (
     <main className="flex min-h-screen flex-col">
@@ -69,50 +67,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Blog Section */}
-      <section className="py-16 px-4 bg-muted">
-        <div className="container max-w-5xl mx-auto">
-          <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl font-bold">Latest Articles</h2>
-            <Link href="/blog" className="inline-flex items-center text-muted-foreground hover:text-foreground">
-              View All <ArrowRight className="ml-1 h-4 w-4" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {recentPosts.map((post) => (
-              <Link key={post.id} href={`/blog/${post.slug}`} className="group">
-                <div className="overflow-hidden rounded-lg bg-card shadow-md hover:shadow-xl transition-shadow h-full flex flex-col">
-                  <div className="aspect-video relative">
-                    <Image
-                      src={post.coverImage || "/placeholder.svg"}
-                      alt={post.title}
-                      fill
-                      className="object-cover transition-transform group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-                    />
-                  </div>
-                  <div className="p-4 flex-grow flex flex-col">
-                    <div className="flex flex-wrap gap-2 mb-2">
-                      {post.categories.slice(0, 2).map((category) => (
-                        <Badge key={category} variant="secondary" className="text-xs">
-                          {category.charAt(0).toUpperCase() + category.slice(1)}
-                        </Badge>
-                      ))}
-                    </div>
-                    <h3 className="font-bold text-lg mb-2 group-hover:underline">{post.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4 flex-grow">{post.excerpt.substring(0, 100)}...</p>
-                    <div className="flex items-center text-xs text-muted-foreground mt-auto">
-                      <span>{post.date}</span>
-                      <span className="mx-2">•</span>
-                      <span>{post.readingTime}</span>
-                    </div>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
     </main>
   )
 }
