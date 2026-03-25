@@ -38,7 +38,7 @@ export default function SkillsPage() {
                     <TableRow>
                       <TableHead>Skill</TableHead>
                       <TableHead>Proficiency</TableHead>
-                      <TableHead>Years of Experience</TableHead>ead>
+                      <TableHead>Years of Experience</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
